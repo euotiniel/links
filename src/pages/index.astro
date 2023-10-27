@@ -11,10 +11,13 @@ import Links from "../components/Links.astro";
 <Layout title="Otoniel Emanuel">
   <main>
     <div class="flex flex-col items-center justify-center gap-2">
-      <Avatar avatarLink="https://github.com/euotiniel.png" />
+      <div class="floating-circle flex flex-col items-center justify-center gap-2">
+		<Avatar avatarLink="https://github.com/euotiniel.png" />
       <User userName="@euotiniel" />
+	  </div>
       <Bio bio="sometimes i write code" />
     </div>
+
     <section class="flex flex-col gap-4 py-10">
       <Links url="" links="Personal website" />
       <Links url="https://github.com/euotiniel" links="GitHub" />
@@ -37,4 +40,17 @@ import Links from "../components/Links.astro";
     font-size: 20px;
     line-height: 1.6;
   }
+
+  .floating-circle {
+  animation: float 4s infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
 </style>
