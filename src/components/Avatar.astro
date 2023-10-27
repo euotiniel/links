@@ -1,0 +1,13 @@
+---
+interface Props {
+  avatarLink: string;
+}
+
+const { avatarLink } = Astro.props;
+---
+
+<img
+  src={avatarLink}
+  alt="euotiniel"
+  class="relative flex h-14 w-14 shrink-0 overflow-hidden rounded-full"
+/>

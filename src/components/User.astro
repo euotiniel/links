@@ -1,0 +1,13 @@
+---
+interface Props {
+  userName: string;
+}
+
+const { userName } = Astro.props;
+---
+
+<p
+  class="bg-slate-500/25 rounded-xl relative bg-muted px-[0.3rem] py-[0.2rem] font-mono text-xs font-semibold"
+>
+  {userName}
+</p>
